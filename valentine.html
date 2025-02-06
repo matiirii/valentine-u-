@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: red;
+        }
+        .button {
+            background-color: red;
+            color: white;
+            padding: 15px 32px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 16px;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will You Be My Valentine?</h1>
+    <button class="button" onclick="yesFunction()">Yes</button>
+    <button class="button" onclick="noFunction()">No</button>
+    <p id="message"></p>
+
+    <script>
+        let noClickCount = 0;
+
+        function yesFunction() {
+            document.getElementById('message').textContent = "YAYYYYY :3";
+        }
+
+        function noFunction() {
+            const messages = ["nyi", ":c", "more kisses?"];
+            document.getElementById('message').textContent = messages[noClickCount] || "more kisses?";
+            noClickCount++;
+        }
+    </script>
+</body>
+</html>
